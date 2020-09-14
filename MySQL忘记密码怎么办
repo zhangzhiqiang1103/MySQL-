@@ -9,4 +9,12 @@
 3.按住键盘上的Window+R键
 4.输入“cmd”点击“确定”
 5.随后打开上一步mysql.exe所在的文件夹，将复制的路径输入到控制台中
-6.
+6.按“Ctrl+alt+.”启动任务管理器，找到“mysqld.exe”程序后单击，点击“结束进程”
+7.输入“mysqld –skip-grant-tables”，敲回车键
+8.输入“mysql”，敲回车键
+9.输入“show databases”，敲回车键
+10.输入“ use mysql”，敲回车键
+11.输入“show tables”，敲回车键，找到用户信息表“user”
+12.输入“select user,host,password from user”后敲回车
+13.输入命令“update user set password=password(xxx) where user='xxx' and host='localhost' ”，将红框内内容改为“root”
+14.关闭窗口，用同样的方法启动cmd命令，用刚更改的密码登录即可
